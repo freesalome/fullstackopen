@@ -1,0 +1,25 @@
+```mermaid
+
+sequenceDiagram
+
+browser->>server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+
+server->>browser: Status Code 302
+
+browser->>server: HTTPS GET https://studies.cs.helsinki.fi/exampleapp/notes
+
+server->>browser: HTML document
+
+browser->>server: HTTPS GET https://studies.cs.helsinki.fi/exampleapp/main.css
+
+server->>browser: The CSS file
+
+browser->>server: HTTPS GET https://studies.cs.helsinki.fi/exampleapp/main.js
+
+server->>browser: The Javascript file
+
+browser->>server: HTTPS GET https://studies.cs.helsinki.fi/exampleapp/data.json
+
+server->>browser: The notes as .json data
+
+```
