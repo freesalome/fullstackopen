@@ -17,7 +17,7 @@ let notes = [
         "name": "Ada Lovelace", 
         "number": "39-44-5323523"
         },
-        { 
+        {
         "id": "3",
         "name": "Dan Abramov", 
         "number": "12-43-234345"
@@ -76,7 +76,7 @@ app.post('/api/persons', (req, res) => {
     res.json(note)
 })
 
-const PORT = 3001
+const PORT = process.env.PORT || 3001
 app.listen(3001, () => {
   console.log(`Server running on port ${PORT}`)
 })
